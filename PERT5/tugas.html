@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+        }
+
+        article {
+            background-color: palevioletred;
+            border: 1px solid #94b8d1;
+            border-radius: 8px;
+            padding: 12px 14px;
+            width: 100%;
+        }
+
+        article p {
+            margin: 0;
+            color: white;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 767px) {
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+                max-width: 650px;
+                margin: 0 auto;
+            }
+
+            article {
+                width: calc(25% - 8px);
+                min-width: 120px;
+                background-color: blueviolet;
+            }
+
+            p {
+                color: whitesmoke;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.</p>
+        </article>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error sed eligendi cumque harum deserunt?</p>
+        </article>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nostrum, officiis voluptatem est laboriosam iusto.</p>
+        </article>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, veniam ut quas tempora dicta sit.</p>
+        </article>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error sed eligendi cumque harum deserunt?</p>
+        </article>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nostrum, officiis voluptatem est laboriosam iusto.</p>
+        </article>
+    </div>
+</body>
+</html>
